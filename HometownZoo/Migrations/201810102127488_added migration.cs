@@ -3,10 +3,20 @@ namespace HometownZoo.Migrations
     using System;
     using System.Data.Entity.Migrations;
     
-    public partial class InitialCreate : DbMigration
+    public partial class addedmigration : DbMigration
     {
         public override void Up()
         {
+            CreateTable(
+                "dbo.Animals",
+                c => new
+                    {
+                        animalId = c.Int(nullable: false, identity: true),
+                        name = c.String(),
+                        age = c.Int(nullable: false),
+                    })
+                .PrimaryKey(t => t.animalId);
+            
             CreateTable(
                 "dbo.AspNetRoles",
                 c => new
@@ -94,6 +104,7 @@ namespace HometownZoo.Migrations
             DropTable("dbo.AspNetUsers");
             DropTable("dbo.AspNetUserRoles");
             DropTable("dbo.AspNetRoles");
+            DropTable("dbo.Animals");
         }
     }
 }

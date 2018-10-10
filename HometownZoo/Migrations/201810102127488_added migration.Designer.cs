@@ -7,13 +7,13 @@ namespace HometownZoo.Migrations
     using System.Resources;
     
     [GeneratedCode("EntityFramework.Migrations", "6.2.0-61023")]
-    public sealed partial class addedanimals : IMigrationMetadata
+    public sealed partial class addedmigration : IMigrationMetadata
     {
-        private readonly ResourceManager Resources = new ResourceManager(typeof(addedanimals));
+        private readonly ResourceManager Resources = new ResourceManager(typeof(addedmigration));
         
         string IMigrationMetadata.Id
         {
-            get { return "201810032138555_added animals"; }
+            get { return "201810102127488_added migration"; }
         }
         
         string IMigrationMetadata.Source

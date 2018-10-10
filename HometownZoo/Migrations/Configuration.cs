@@ -10,7 +10,6 @@ namespace HometownZoo.Migrations
         public Configuration()
         {
             AutomaticMigrationsEnabled = false;
-            ContextKey = "HometownZoo.Models.ApplicationDbContext";
         }
 
         protected override void Seed(HometownZoo.Models.ApplicationDbContext context)

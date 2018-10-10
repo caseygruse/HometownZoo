@@ -201,13 +201,9 @@
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
-    <Compile Include="Migrations\201809262108543_InitialCreate.cs" />
-    <Compile Include="Migrations\201809262108543_InitialCreate.Designer.cs">
-      <DependentUpon>201809262108543_InitialCreate.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201810032138555_added animals.cs" />
-    <Compile Include="Migrations\201810032138555_added animals.Designer.cs">
-      <DependentUpon>201810032138555_added animals.cs</DependentUpon>
+    <Compile Include="Migrations\201810102127488_added migration.cs" />
+    <Compile Include="Migrations\201810102127488_added migration.Designer.cs">
+      <DependentUpon>201810102127488_added migration.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
@@ -231,7 +227,9 @@
     <Content Include="ApplicationInsights.config">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-    <None Include="Properties\PublishProfiles\HometownZooCasey - Web Deploy.pubxml" />
+    <None Include="Properties\PublishProfiles\HometownZooCasey - Web Deploy.pubxml">
+      <SubType>Designer</SubType>
+    </None>
     <None Include="Scripts\jquery-3.3.1.intellisense.js" />
     <Content Include="Scripts\jquery-3.3.1.js" />
     <Content Include="Scripts\jquery-3.3.1.min.js" />
@@ -295,11 +293,8 @@
     <Content Include="Scripts\jquery-3.3.1.min.map" />
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Migrations\201809262108543_InitialCreate.resx">
-      <DependentUpon>201809262108543_InitialCreate.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201810032138555_added animals.resx">
-      <DependentUpon>201810032138555_added animals.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\201810102127488_added migration.resx">
+      <DependentUpon>201810102127488_added migration.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
