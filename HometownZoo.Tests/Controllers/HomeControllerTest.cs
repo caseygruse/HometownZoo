@@ -13,41 +13,48 @@ namespace HometownZoo.Tests.Controllers
     public class HomeControllerTest
     {
         [TestMethod]
-        public void Index()
+        public void Index_ReturnsNonNullViewResult()
         {
-            // Arrange
-            HomeController controller = new HomeController();
-
-            // Act
-            ViewResult result = controller.Index() as ViewResult;
-
-            // Assert
+            //Arrange       // create the controller to test
+            HomeController home = new HomeController();
+            //Act        // 
+            ViewResult result = home.Index() as ViewResult;
+            //Assert
             Assert.IsNotNull(result);
         }
 
         [TestMethod]
-        public void About()
+        public void About_ReturnsNonNullViewResult()
         {
-            // Arrange
-            HomeController controller = new HomeController();
-
-            // Act
-            ViewResult result = controller.About() as ViewResult;
-
-            // Assert
-            Assert.AreEqual("Your application description page.", result.ViewBag.Message);
+            //Arrange
+            HomeController home = new HomeController();
+            //Act        // if this ever dosnt work than Assert will be null.
+            ViewResult result = home.About() as ViewResult;
+            //Assert
+            Assert.IsNotNull(result);
         }
 
         [TestMethod]
-        public void Contact()
+        public void About_ViewBagShouldHaveNonNullViewBagMessage()
         {
-            // Arrange
-            HomeController controller = new HomeController();
+            //Arrange
+            HomeController home = new HomeController();
+            //Act
+            ViewResult result = home.About() as ViewResult;
+            //Assert
+            Assert.IsNotNull(result.ViewBag.Message);
 
-            // Act
-            ViewResult result = controller.Contact() as ViewResult;
+            //checks for exact message.
+            //Assert.AreEqual("Your application description page.", result.ViewBag.Message);
+        }
 
-            // Assert
+        [TestMethod]
+        public void Contact_ReturnsNonNullViewResult()
+        {
+            HomeController home = new HomeController();
+
+            ViewResult result = home.Contact() as ViewResult;
+
             Assert.IsNotNull(result);
         }
     }
